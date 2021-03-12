@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimidia</title>
+</head>
+    <body>
+        <h1>Imagens Dinâmicas , áudio e vídeo </h1>
+            <p>
+                
+                <h3>Para adicionar imagens; </h3> <br> 
+                &lg; picture &gt; &lg; img src ="image.png" alt="Descricao da imahgem" &gt; &lg; /picture &gt;<br><br>
+                <picture> 
+                    <img src="imagemp.png" alt= "Imagem">
+                </picture><br><br>
+                
+                <h3>  Parametros da Tahg Picture: </h3> <br>
+                <ul> Mudar a imagem dinamicament, depentendo do tamanho da tela.
+                    <pre> 
+                        &lg; picture &gt;
+                        &lg; source media = "(max-width:1000px") srcset="imagem.jpg" type="iimage/png" &gt; 
+                        &lg; img src="imagemg.png" alt="imagem" &gt; 
+                        &lg; /picture &gt;
+                    </pre>
+                    <li> Souce = tem vários par ametros </li>
+                        <ol> 
+                        <li> media = largura minima, no caso 1000px;</li>
+                        </ol>
+                    <li> srcset = caso seja menos de 1000px  irá carregar a imagem que for colocada como parametro</li> 
+                    <li> type = tipo da imagem</li>
+                    <li> src =  cao seja mais de 1000px irá carregar a umagem que for colocada como parametro</li> 
+                </ul> <br>
+                <picture>
+                    <source media = "(max-width: 750px)" srcset="imagemp.png" type="image/png">
+                    <source media = "(max-width: 1050px)" srcset="imagemm.png" type="image/png">
+                    <img src="imagemg.png" alt="Imagem">
+                </picture><br><br>
+            </p>
+        <h1> Audios </h1>
+            <p>
+                
+                <h3> Reproduzindo Audio Simples</h3>
+                <audio  src= "audio.mp3" controls >Audio</audio>  
+                <!--autoplay = inicia o audio sem precisar iniciar o audio-->
+                <!--controls = mostra os controles do audio em tela -->
+                
+                <h3> Reproduzindo Audio Compartibilidade</h3>
+                <audio preload="none" controls> 
+                    <!--
+                    Temos tres parametros:
+                        auto = só irá considerar que o site carregou depois que todo o audio carregar;
+                        metadata =  só irá carregar alguns dados do arquivo, como nome e data;
+                        none = só irá carregar quando o usuário apertar o play;
+                        loop = irá reproduzir o audio novamente depois de terminar;
+                    -->
+                    <source src="audio.mp3" type="audio/mpeg">
+                    <souce  src="audio.ogg" type="audio/ogg">
+                    <souce  src="audio.wav" type="audio/wav"> <!-- Arquivos Wav são mais pessados, EVITAR -->
+                    <p> Infelizmente o seu navegador não consegue reproduzir o audio</p>
+                    <a href="audio.mp3"> Clique aqui para baixar o arquivo de audio.</a>
+                </audio>
+                <!-- No caso acima, o navegador iá tentar reprodzuir um formato de video. caso não tenha compartibilidade irá reproduzir o outro audio, caso nenhuma das opções seja possivel, irá apresentar a mensagem e apresentando o link para dowload.-->
+            </p>
+            
+        <h1> Video </h1>
+            <p>
+                <!-- Aquivos de Videos Compativeis com navegadores:
+                        MP4
+                        WPEG
+                        WEBM
+                        OGV
+                -->
+                
+                <h3>Inserindo videos hospedados Localmente</h3>
+                <video src = "video.mp4" width="500" controls></video>
+                <!-- Dessa maneira , se houver muitos acessos irá consumir muita banda-->
+                
+                <h3>Inserindo videos hospedados Localmente - Compartibilidade com os navegadores </h3>
+                <video width="500" poster="imagem.jpg" controls > <!-- poster =  imagem de capa de video-->
+                    <source src="video.mp4" type="video/mp4" >
+                    <source src="video.m4v" type="video/m4v">
+                    <source src="video.webm" type="video.webm">
+                    <source src ="video.ogv" type="video.ogv">
+                    <p>Esse video não está em um formato Compativel com  seu navegador, você pode realizar dowload dele</p>
+                    <a href="video.mp4"> Video para Dowload</a>
+                </video>
+                
+                <h3> Inserindo videos hospedados em locais externos</h3>
+                <!-- Youtube - Compartilhar - Incorporar - Cópia e Cola -->
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/KTKXx88DGMw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen> </iframe>
+            </p>
+
+
+        <p1>
+            <h1>Respostas de Questões: </h1>
+            <hr>
+            <pre> 
+                <a href="https://github.com/gustavoguanabara/html-css/blob/master/aulas-pdf/11%20-%20Imagens%20din%C3%A2micas%2C%20%C3%A1udios%20e%20v%C3%ADdeos.pdf"> Exercicios </a>
+                <br>
+                1) C      
+                2) B  
+                3) A   
+                4) A  
+                5) D    
+                6) C 
+                7) B
+                8) A
+                9) C
+                10) B
+            </pre>
+        </p1>
+
+    </body>
+</html>

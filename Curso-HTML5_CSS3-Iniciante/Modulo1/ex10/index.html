@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link's</title>
+</head>
+<body>
+    <h1> Links</h1>
+    <p> 
+        <ul>
+            <li><h3> Adicionando HiperLinks </h3></li>
+            Para criar Hiperlinks devemos criar ancoras:
+            <br> A tag &lg; a href=" url " &gt; Texto &lg; /a &lg;
+            <br> <a href="https://www.google.com.br/"> Google</a>
+            <br>
+            <br>
+            <li><h3> Parametros </h3></li>
+            Podemos parametrizar comportamentos ao direcionar para um link 
+                    <ol type="I">
+                        <li><br> _  
+                        <br> A tag &lg; a href=" url " target = "_blank" &gt; Texto &lg; /a &lg;
+                        <br> <a href="https://www.google.com.br/" target="_blank"> Google</a>
+
+                        <li>_self = vai abrir o link em uma nova janela em branco </li>
+                        <br> A tag &lg; a href=" url " target = "_self" &gt; Texto &lg; /a &lg;
+                        <br> <a href="https://www.google.com.br/" target="_self"> Google</a>
+
+                        <li> _top = vai desfazer todos os frames e abrir o destino no navegador completo </li>
+                        <br> A tag &lg; a href=" url " target = "_top" &gt; Texto &lg; /a &lg;
+                        <br> <a href="https://www.google.com.br/" target="_top"> Google</a>
+                        
+                        <li> _parent = similiar ao caso _top em uma referencia á janela mãe </li>
+                        <br> A tag &lg; a href=" url " target = "_parent" &gt; Texto &lg; /a &lg;
+                        <br> <a href="https://www.google.com.br/" target="_parent"> Google</a>
+
+                        <li> nome-do-frame = caso esteja usando frames, iniciar o nome da janela a abrir</li>
+                        <br> A tag &lg; a href=" url " target = "nome-do-frame" &gt; Texto &lg; /a &lg;
+                        <br> <a href="https://www.google.com.br/" target="nome-do-frame"> Google</a>
+
+                        <li> hreflang = permite indicar qual é o idioma principal do site para onde o link está desviando o fluxo de navegação</li>
+                    </ol>  
+
+                    <br>
+                    <br>
+            <li> <h3>Natureza do Destino </h3></li>
+            <br> A tag &lg; a href=" url " target = "_self" rel ="next" &gt; Texto &lg; /a &lg;
+            <ol>
+                <li>next = indica que o link é para a próxima parte do documento atual</li>
+                <br> A tag &lg; a href=" url " target = "_self" rel ="next" &gt; Texto &lg; /a &lg;
+                <br> <a href="https://www.google.com.br/" target="_parent" rel="next"> Google</a>
+
+                <li>prev = indica que o link é para a parte anterior do documento atual</li>
+                <br> A tag &lg; a href=" url " target = "_self" rel ="prev" &gt; Texto &lg; /a &lg;
+                <br> <a href="https://www.google.com.br/" target="_parent" rel="prev"> Google</a>
+
+
+                <li>author = inidica que é um link para o site do autor do antigo atual </li>
+                <br> A tag &lg; a href=" url " target = "_self" rel ="author" &gt; Texto &lg; /a &lg;
+                <br> <a href="https://www.google.com.br/" target="_parent" rel="author"> Google</a>
+
+                <li> external = inidica que é um link para outro site que não faz parte do site atual</li>
+                <br> A tag &lg; a href=" url " target = "_self" rel ="external" &gt; Texto &lg; /a &lg;
+                <br> <a href="https://www.google.com.br/" target="_parent" rel="external"> Google</a>
+
+                <br>
+                <br>
+            </ol>   
+            
+            <li> <h3> Downloads </h3></li>
+                Na versão HTML5 a tag ancora recebeu novos parametros para dowload
+                <br> A tag &lg; a href=" url " download="nomeaquivo.pdf" type ="applicarion/pdf" &gt; Texto &lg; /a &lg;
+                <ol>
+                    Existem alguns parametros deacordo com o formato do arquivo:
+                    <li> application/zip </li>
+                    <li> text/html </li>
+                    <li> text/css </li>
+                    <li> text/javascript </li>
+                    <li> video/mp4 </li>
+                    <li> video/H264 </li>
+                    <li> video/JPEG </li>
+                    <li> audio/aac </li>
+                    <li> audio/mpeg </li>
+                    <li> font/ttf </li>
+                    <li> image/jpeg </li>
+                    <li> image/png </li>
+                </ol>
+     </ul>
+    </p>
+
+    <p1>    
+        <h1> Respostas das Questões </h1>
+        <hr>
+        <pre> 
+            <a href="https://github.com/gustavoguanabara/html-css/blob/master/aulas-pdf/10%20-%20Liga%C3%A7%C3%B5es%20em%20toda%20parte.pdf"> Exercicios </a>
+            <br>
+            1) A    
+            2) B 
+            3) C  
+            4) D  
+            5) D    
+            6) D 
+            7) A
+            8) C
+            9) C
+            10) D
+        </pre>
+    </p1>
+</body>
+</html>

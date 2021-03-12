@@ -1,0 +1,228 @@
+@charset "UTF-8";
+@font-face{ /* colocar uma fonte personalizada*/
+	font-family:'FonteLogo'; /*nomedafonte*/
+	src:url("../_fonts/bubblegum-sans-regular.otf"); /*endereço da fonte*/
+}
+	body{
+	font-family: Arial,sans-serif;
+	background-color: #dddddd;
+	color: rgba(0,0,0,1);
+	}
+	/* FORMATAÇÃO DA INTERFACE */
+	div#interface{
+		width: 1050px; /* delimitar a largura*/
+		background-color: white; /* cor do container*/
+		margin: -20px auto 0px auto; /*cima direita baixo esquerda*/	
+		box-shadow: 0px 0px 10px rgba(0,0,0,0.5); /* sombra envolta do objeto*/
+		padding: 10px 10px 10px 10px; /* posicionar o texto sem estar colado nas bordas*/
+	}
+	p { /*configuração dos paragrafos*/
+		text-align: justify;
+		text-indent: 50px;
+	}
+	a { /* deixar links escuros */
+		color: #606060;
+		text-decoration: none;
+	}
+	a:hover{ /* hover precisa estar colado nos ":" --> :hover*/
+		text-decoration:underline;
+	}
+	header#cabecalho img#icone{ /* configuração da imagem de icone */
+		position: absolute;
+		left: 1080px;
+		top: 75px;
+	}
+	header#cabecalho{
+		border-bottom: 1px #606060 solid; /* divisão do cabeçalho */
+		height: 150px;
+		background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 90px; /*.. sai de uma pasta para outra. url permite incluir a imagem. o "no-repeat" para não repetir o arquivo" posicionamento da imagem*/
+	}
+	header#cabecalho h1{
+		font-family: 'FonteLogo', sans-serif; 
+		font-size: 30pt;
+		color: #606060;
+		text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+		padding: 0px;
+		margin-bottom: 0px;
+	}
+	header#cabecalho h2{
+		font-family: Ariel,sans-serif;
+		color: #888888;
+		font-size: 15pt;
+		padding: 0px;
+		margin-top:0px;
+		
+	}
+	/* FORMATAÇÃO DE IMAGENS COM LEGENDAS */
+	figure.foto-legenda{
+		position: relative;
+		border: 8px solid white;
+		box-shadow: 1px 1px 4px black;	
+	}
+	figure.foto-legenda img{
+		width: 100%;
+		height: 100%;
+	}
+	figure.foto-legenda figcaption{
+		opacity: 0;
+		position: absolute;
+		top: 0px;
+		background-color: rgba (0,0,0,0.4);
+		color: white;
+		width:100%;
+		height:100%;
+		padding: 10px;
+		box-sizing: border-box;
+		transition: opacity 1s;
+	}
+	figure.foto-legenda:hover figcaption{
+		opacity:1;
+	}
+	
+	/* Formatação do Manu */
+	nav#menu{
+		display: block;/* deixar o navegador em um bloco porque um bloco pode flutuar na tela*/
+	}
+	nav#menu ul{
+		list-style: none; /* tira os topicos*/
+		text-transform:uppercase; /* deixa as letras maiusculas */
+		position: absolute; /* da permissão para passar por cima/ absolute = fica livre no site / relative = dentro do quadrado*/
+		top:-20px; /*faz com que o menu fique colado no navegador em cima*/
+		left: 630px; /* faz com que o menu fique colado no navegador para a esqueda */
+	}
+	nav#menu li{
+		display: inline-block; /* um bloco pode ser exibido todo numa linha*/
+		background-color: #dddddd; /* cria uma caixa envolta do menu*/
+		padding:10px; /* distancia entre os menus dentro do quadrado*/
+		margin: 2px; /* distancia entre os menus fora do quadrado */
+		transition: background-color 1s; /* vai demorar alguns segundos.*/
+	}
+	nav#menu li:hover{
+		background-color: #606060; /* mudar a cor do botão do menu*/
+	}
+	nav#menu h1{
+		display:none; /* faz sumir o manu principal */
+	}
+	nav#menu a{ /* decoração das letras do menu*/
+		color: #00000;
+		text-decoration: none;
+	}
+	nav#manu a:hover{ /* faz a letra do menu mudar de cor */
+		color: #ffffff;
+		text-decoration: inderline;
+	}
+	section#corpo{
+		display:block; /* para ser mostrada como um bloco*/
+		width:600px;
+		float:left; /* conteudo fica no lado esquedo*/
+		border-right: 1px solid #606060;
+		padding-right: 15pt;
+	}
+	article#noticia-principal h2 { /*formatando os sub-titulos*/
+		font-size: 12pt;
+		color: #606060;
+		background-color: #dddddd;
+		padding: 5px 0px 5px 10px; 
+		margin: 10px 0px 10px 0px;	
+	}
+	
+	header#cabecalho-artigo h1{
+		font-family:'FonteLogo', sans-serif;
+		font-size: 20pt;
+		color: #606060;
+		margin-bottom: 0px;
+		margin-top: 0px;
+	}
+	.direita {
+		text-align: right;
+	}
+	
+	header#cabecalho-artigo h2{
+		font-size:13pt;
+		color: #cecece;
+		background-color: #ffffff;
+		margin:0px;
+	}
+	
+	header#cabecalho-artigo h3{
+		font-size: 10pt;
+		color: #606060;
+	}
+	
+	
+	table#tabelaspec{ /* configura a tabela*/
+		border: 1px solid #606060; /* borda da tabela*/
+		border-spacing: 0px; 
+		margin-left: auto;
+		margin-right: auto;
+	}
+	table#tabelaspec td{ /*configura celular*/
+		border: 1px solid #606060; /* borda das celulas*/
+		padding: 10px;/* as palavras tem 10px de distancia de sua bordas dentro da celula*/
+		text-align:left; /* deixa o texti dentro das celulas para cima*/
+		vertical-align:top; /*alinha verticalmente o texto podendo ser acima=top , em baixo =bottom, medio =medium*/ 
+	}
+	table#tabelaspec td.ce{ /* configurar as colunas esquerda */
+		color: #ffffff;
+		background-color: #606060;
+		vertical-align: top;
+		font-weight:bold; /*deixar em negrito*/
+	}
+	table#tabelaspec td.cd{ /* configurar as colunas a direira*/ 
+		background-color: #cecece;
+	}
+	table#tabelaspec caption{ /*titulo da tabela*/
+		color: #888888;
+		font-size: 13pt;
+		font-weight: bolder;
+	}	
+	table#tabelaspec caption span{ /*data*/
+		display:block;
+		float:right;
+		color: #000000;
+		font-size:8pt;
+		margin-top: 10px;
+	}
+	video#filme01{
+		display:block;
+		position: relative;
+		text-align: center;
+		left: 105px;
+		width:400px;
+	}
+	video#filme02{
+		display:block;
+		position: relative;
+		text-align: center;
+		
+	}
+	aside#lateral{
+		display:block;
+		width:400px;
+		float:right;/* conteudo fica no lado direito*/
+		background-color: #dddddd;
+		padding:10px;
+		margin-top: 10px;
+		box-shadow: 2px 2px rgba(0,0,0,0.4);
+	}
+	aside#lateral h1 {
+		font-family:'FonteLogo', sans-serif;
+		font-size: 20pt;
+		color: #606060;
+		margin-top:0px;
+	}
+	aside#lateral h2{
+		background-color: #606060;
+		font-size: 15pt;
+		color: #ffffff;
+		padding:5px;
+	}
+	footer#rodape{
+		clear:both; /* que o conteúdo fique fora da configuração*/
+		border-top: 1px solid #606060;
+		padding-top: 15pt;
+	}
+	footer#rodape p{
+		text-align : center;
+	}
+	
