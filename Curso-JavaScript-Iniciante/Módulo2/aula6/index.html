@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula JS</title>
+</head>
+<body>
+    <h1> Tipos de Dados Primitivos</h1>
+    <ul>
+        <li>Number</li>
+            <ol type="I">
+                <li>infinity</li>
+                <li>NaN</li>
+            </ol>
+        <li>String</li>
+            <ol type="I">
+                <li>var a = "palavra"</li>
+                <li>var a = 'palavra'</li>
+                <li>var a = `palavra`</li>
+            </ol>
+        <li>Boolean</li>
+        <li>null</li>
+        <li>undefined</li>
+        <li>object</li>
+            <ol type="I">
+                <li>array</li>
+            </ol>
+        <li>function</li>
+    </ul>
+    <script>
+        //STRING -> NUMBER
+
+        //INTEIRO
+        // as variaveis podem iniciar com & _ e letras, sendo permitido usar acentos e simbolos
+        var $a = Number.parseInt(prompt("Digite um número inteiro:")); //podemos converter ao receber o dado na várivel
+        var $b = window.prompt("Diite um outro valor inteiro:");//podemos converter ao fazer a operação
+        var $c = $a+ Number.parseInt($b);
+        // (number + number) para adição
+        // (string + string) para contenação
+        window.alert("Resultado: " + $c + "!");
+        // FLOAT
+        var $d = Number.parseFloat(prompt("Digite um número real:")); 
+        var $e = window.prompt("Diite um outro valor real:");
+        var $f = $d+ Number.parseFloat($e);
+        window.alert("Resultado: " + Number.parseFloat($f) + "!");
+
+        // NUMBER = JavaScript decide qual o tipo
+        var $g = Number(prompt("Digite um número:")); 
+        var $h = window.prompt("Diite um outro valor:");
+        var $i = $g+ Number($h);
+        window.alert("Resultado: " + $i + "!");
+
+        //NUMBER -> STRING
+        
+        var $j = "65431-100";
+        String($j);
+        window.alert("CEP: "+ $j);
+        
+        var $l = "684532-880";
+        n.toString($l);
+        window.alert("CEP: "+ $l);
+        
+        /*
+        *  var s = 'JavaScript' 
+        * 'Eu estou aprendendo s' - sem interpolação
+        * "Eu estou aprendendo" + s - com contenação
+        * `Eu estou aprendendo ${s}` - usa template sttring
+        */ 
+    
+        var $m = Number(prompt("Digite um número (tetando as crases):")); 
+        var $n = window.prompt("Diite um outro (tetando as crases):");
+        var $o = $m+ Number($n);
+        window.alert(`O Resultado entre os valores ${m} + ${n} = ${o} !`);
+
+    </script>
+</body>
+</html>
