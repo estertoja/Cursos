@@ -9,18 +9,31 @@
 <body>
     <script>
     /*
-    * s.length = quantos caracteres um string 
-    * s.toUpperCase() = mudar as letras para maisculas
-    * s.toLowerCase() = mudar as letras para minusculas
+    ** - Configurações com Letras - **
+    * .length = quantos caracteres um string 
+    * .toUpperCase() = mudar as letras para maisculas
+    * .toLowerCase() = mudar as letras para minusculas
+    * 
+    */
+    var palavra = window.prompt("Digite uma palavra");
+    document.write(`A palavra escrita foi = <strong> ${palavra} </strong> </br>`);
+    document.write(` A palava digitada tem = ${palavra.length} letras. </br> `); 
+    document.write(` A palavra em maisculo =${palavra.toUpperCase()} </br> `)
+    document.write(` A palavra em minusculo = ${palavra.toLowerCase()} </br>  </br>`)
+
+    /* 
+    ** - Configurações com números - **
+    * .toFixed(quantidade após a virgula)
+    * .toLocaleString('pt-BR', {style:'currency', currency: 'BRL'})  // para configurar como real 
+                    tipo objeto
+                    {style:'currency',  = para mostrar em valor monetário
+                    currency: 'BRL'} = valor nonetario brasileiro
     * 
     */
 
-    var palavra = window.prompt("Digite uma palavra");
-    document.write(`A palavra escrita foi = ${palavra}. `);
-    document.write(` A palava digitada tem = ${palavra.length} letras. `);
-    document.write(` A palavra em maisculo =${palavra.toUpperCase}. `);
-    document.write(` A palavra em minusculo = ${palavra.toLowerCase}; `);
-
+    var numero = 14.2
+    document.write (` Numero ${numero.toFixed(2)}  </br> `);
+    document.write (` Real ${numero.toLocaleString('pt-BR', {style:'currency', currency: 'BRL'})}  </br>`);
 
     </script>
 </body>
