@@ -7,7 +7,12 @@
     <title>Aprendendo JS</title>
 </head>
 <body>
-    <h1> Testando </h1>
+    <h1 name='titulo'> Testando </h1>
+    <p id='prg1'> Este é o <strong> o primeiro </strong> paragrafo  e está sendo utilizado para realizar testes</p>
+    <p id='prg2'> Este é o paragrafo 2 </br> E está sendo utilizado para realizar testes</p>
+    <div class='div1'> Clique em MIM </div>
+    <div id='div2'> Clique em MIM 2 Testando </div>
+
     <script>
         /* Aprendendo DOM
         *
@@ -35,30 +40,53 @@
             * por Nome;
             * por Classe;
             * por Seletor;
-        *
-        *
+        */
+        /*
         * Por marca 
         * ex. ( getElementByTagName() ) = seleciona mais de um elemento.
-        *
-        *
-        * Por ID;
-        *
-        *
-        *
-        * Por Nome;
-        *
-        *
-        *
-        * Por Classe;
-        *
-        *
-        *
-        * Por Seletor;
-        *
-        *
-
         */
 
+
+       // seleciona o (paragrafo) [qual o dos paragrafos] 
+        var p1 = window.document.getElementsByTagName('p')[0] 
+        window.document.write('Por Marca: Está escrito assim: ' + p1.innerText)
+
+
+        // É possivel alterar as caracteristicas:
+        var corpo = window.document.body
+        corpo.style.background = 'green'
+        p1.style.color = 'white'
+
+        // apresenta o texto sem formatação html
+        document.write(p1.innerText) 
+
+        // apresenta o texto com formatação html
+        document.write(p1.innerText) 
+        /*
+        /*
+        * Por ID;
+        */
+        var p2 = window.document.getElementById('prg2');
+        window.document.writeln('Por ID: Está escrito assim: ' + p2.innerText)
+        /*
+        * Por Nome;
+        */
+        var title = window.document.getElementsByName('titulo')[0];
+        window.document.write('Por Nome: Está escrito assim: ' + title.innerText)
+        /*
+        * Por Classe;
+        */
+        var div = window.document.getElementsByClassName('div1')[0]
+        window.document.write('Por Classe: Está escrito assim: ' + div.innerText)
+        div.style.color='blue'
+        /*
+        * Por Seletor;
+        * querySelector()
+        * querySekectorAll()
+        */
+       var d = window.document.querySelector('div#div2')
+        d.style.color='yellow'
+        d.style.background='red'
     </script>
 </body>
 </html>
